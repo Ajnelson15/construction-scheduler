@@ -7,9 +7,9 @@ public class ConstructionTask {
     private String task_name;
     private LocalDate start_date;
     private LocalDate end_date;
-    private int task_status;
+    private TaskStatus task_status;
 
-    public ConstructionTask(int task_id, String task_name, LocalDate start_date,LocalDate end_date, int task_status) {
+    public ConstructionTask(int task_id, String task_name, LocalDate start_date,LocalDate end_date, TaskStatus task_status) {
         this.task_id = task_id;
         this.task_name = task_name;
         this.start_date = start_date;
@@ -44,12 +44,12 @@ public class ConstructionTask {
         return this.end_date = end_date;
     }
 
-    public int getTask_status () {
-        return task_status;
+    public TaskStatus getTask_status () {
+        return this.task_status;
     }
 
-    public int setTask_status() {
-        return this.task_status = task_status;
+    public void setTask_status(TaskStatus task_status) {
+        this.task_status = task_status;
     }
 }
 
